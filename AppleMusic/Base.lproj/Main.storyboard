@@ -45,6 +45,10 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="reverse" title=""/>
+                                                <connections>
+                                                    <action selector="touchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zeZ-1k-Qgy"/>
+                                                    <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf3-kM-Qmq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-5s-b3z">
                                                 <rect key="frame" x="130" y="0.0" width="70" height="70"/>
@@ -53,7 +57,10 @@
                                                     <constraint firstAttribute="height" constant="70" id="jb6-Ef-E6n"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
+                                                <buttonConfiguration key="configuration" style="plain" image="pause" title=""/>
+                                                <connections>
+                                                    <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQQ-WU-kgh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL4-XL-Rju">
                                                 <rect key="frame" x="260" y="0.0" width="70" height="70"/>
@@ -63,6 +70,10 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="forward" title=""/>
+                                                <connections>
+                                                    <action selector="touchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="d1M-57-aQP"/>
+                                                    <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEv-Zv-x6u"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -95,7 +106,6 @@
                         <outlet property="forwardBackgroundView" destination="yHG-KS-WCl" id="ZA2-It-DyT"/>
                         <outlet property="forwardButton" destination="AL4-XL-Rju" id="txy-f5-vew"/>
                         <outlet property="playPauseBackgroundView" destination="ZqZ-3K-O97" id="KQ9-23-f4Z"/>
-                        <outlet property="playPauseButton" destination="LGR-5s-b3z" id="hdN-To-4H2"/>
                         <outlet property="reverseBackgroundView" destination="cAH-LL-Gmt" id="nQM-2w-OjB"/>
                         <outlet property="reverseButton" destination="Me2-27-DzE" id="sTZ-Xr-AJW"/>
                     </connections>
@@ -107,7 +117,7 @@
     </scenes>
     <resources>
         <image name="forward" width="60" height="60"/>
-        <image name="play" width="60" height="60"/>
+        <image name="pause" width="60" height="60"/>
         <image name="reverse" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

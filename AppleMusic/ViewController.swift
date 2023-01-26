@@ -60,8 +60,52 @@ class ViewController: UIViewController {
                 self.albumImageView.transform = .identity
             }
         }
-        
+        //true -> false
+        //false -> true
         isPlaying.toggle()
+    }
+    
+    @IBAction func touchedDown(_ button: UIButton) {
+        let buttonBackground: UIView
+        
+        switch button {
+        case reverseButton:
+            buttonBackground = reverseBackgroundView
+        case playPauseButton:
+            buttonBackground = playPauseBackgroundView
+        case forwardButton:
+            buttonBackground = forwardBackgroundView
+        default:
+            return
+        }
+        
+        UIView.animate(withDuration: 0.25) {
+            buttonBackground.alpha = 0.3
+            button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }
+    }
+    
+    @IBAction func touchedUpInside(_ button: UIButton) {
+        let buttonBackground: UIView
+        
+        switch button {
+        case reverseButton:
+            buttonBackground = reverseBackgroundView
+        case playPauseButton:
+            buttonBackground = playPauseBackgroundView
+        case forwardButton:
+            buttonBackground = forwardBackgroundView
+        default:
+            return
+        }
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            buttonBackground.alpha = 0
+            buttonBackground.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            button.transform = .identity
+        }) { (_) in
+            buttonBackground.transform = .identity
+        }
     }
         
         
