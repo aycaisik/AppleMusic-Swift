@@ -27,6 +27,10 @@
                                 <rect key="frame" x="290" y="428" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqZ-3K-O97">
+                                <rect key="frame" x="161" y="428" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAH-LL-Gmt">
                                 <rect key="frame" x="33" y="428" width="70" height="70"/>
                                 <subviews>
@@ -72,10 +76,6 @@
                                     <constraint firstItem="Me2-27-DzE" firstAttribute="width" secondItem="cAH-LL-Gmt" secondAttribute="width" id="rPG-R3-4OC"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqZ-3K-O97">
-                                <rect key="frame" x="161" y="428" width="70" height="70"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,6 +90,15 @@
                             <constraint firstItem="LGR-5s-b3z" firstAttribute="centerY" secondItem="ZqZ-3K-O97" secondAttribute="centerY" id="xkG-Zr-QCZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="otY-tg-quU" id="679-yA-6nv"/>
+                        <outlet property="forwardBackgroundView" destination="yHG-KS-WCl" id="ZA2-It-DyT"/>
+                        <outlet property="forwardButton" destination="AL4-XL-Rju" id="txy-f5-vew"/>
+                        <outlet property="playPauseBackgroundView" destination="ZqZ-3K-O97" id="KQ9-23-f4Z"/>
+                        <outlet property="playPauseButton" destination="LGR-5s-b3z" id="hdN-To-4H2"/>
+                        <outlet property="reverseBackgroundView" destination="cAH-LL-Gmt" id="nQM-2w-OjB"/>
+                        <outlet property="reverseButton" destination="Me2-27-DzE" id="sTZ-Xr-AJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
